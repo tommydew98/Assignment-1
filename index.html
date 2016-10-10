@@ -102,6 +102,7 @@
             top: 80%;
             bottom: 20vw;
             border-radius: 60px;
+            transition: width 2s, height 2s;
             
         }
         
@@ -196,6 +197,7 @@
             font-size: 40px;
             font-weight: bold;
             left: 40vw;
+            transition: font-size 2s;
             
         }
         
@@ -211,9 +213,9 @@
         
         .tagline {
             text-align: center;
-            position: absolute;
+            position: relative;
             font-size: 27px;
-            left: 36vw;
+            left: 0;
             top: 200px;
             font-family: cursive;
             color: white;
@@ -243,12 +245,14 @@
     
     
         <div id="body">
-        
+            
         
             <div id="sec1">
                 <img id="sec11" src="https://linustechtips.com/main/uploads/monthly_2016_05/deag.jpg.41b6d8d81155faec6fe80d77ca9f365d.jpg"/>
                 <div class="tagline">They talk about my one-taps</div>
-                <div><img id="profimg" src="https://pbs.twimg.com/profile_images/772853695134310401/AKnM3tXv.jpg"/></div>
+                <div>
+                    <img id="profimg" src="https://pbs.twimg.com/profile_images/772853695134310401/AKnM3tXv.jpg"/>
+                </div>
             </div>
             <div id="sec2">
                 <div id="name">Tommy Do</div>
@@ -291,11 +295,64 @@
         </div>
     
     
-    
+  
     
     
     </body>
 
+    <script>
+        var profile = document.getElementById("profimg");
+        var nam12 = document.getElementById("sec1");
+        var square = document.getElementById("sec3")
+        var bio = document.getElementById("bio");
+        var sector = document.getElementById("sec11");
+        var bot = document.getElementById("sec5");
+        var tim = document.getElementById("sec2");
+        var size = document.getElementById("biotitle");
+        var name = document.getElementById("name");
+        var newme = document.getElementById("sec4");
+        
+        
+        
+        tim.onclick = function() {
+            pro = Math.random() * 500;
+            prox = Math.random() * 500;
+            proc = Math.random() * 1000;
+            profile.style.width = pro + "px";
+            profile.style.height = prox + "px";
+            profile.style.borderRadius = proc + "px";
+            
+        }
+        
+        nam12.onclick = function() {
+            sector.src = "http://vignette3.wikia.nocookie.net/r2d/images/b/b2/Giant_dad_stunlocks.png";
+            
+        }
+        
+        bot.onclick = function() {
+            r = Math.round(Math.random() * 255);
+            g = Math.round(Math.random() * 255);
+            b = Math.round(Math.random() * 255);
+            profile.src = "http://vignette2.wikia.nocookie.net/universe-of-smash-bros-lawl/images/a/a3/Guy_Fieri.png/revision/latest?cb=20160128070849";
+            tim.style.backgroundColor = "rgb(" + r + ","+g+","+b+")";
+        }
+        
+        square.onclick = function() {
+            r = Math.round(Math.random() * 255);
+            g = Math.round(Math.random() * 255);
+            b = Math.round(Math.random() * 255);
+            mis = Math.random() * 100;
+            size.style.fontSize = mis + "px";
+            size.style.color = "rgb(" + r + ","+g+","+b+")";
+        }
+        
+        newme.onclick = function() {
+            bio.src = "https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/12308307_1031742143543260_1792999574351060199_n.jpg?oh=a0d66a062d1150b0998cb430623c311b&oe=58697335";
+        }
+        
+        
+    
+    </script>
 
 
 
